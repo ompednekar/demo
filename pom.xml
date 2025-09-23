@@ -50,26 +50,7 @@
 					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>exchange-mule-maven-plugin</artifactId>
-				<version>1.3.4</version>
-				<executions>
-					<execution>
-						<id>publish-to-exchange</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>publish</goal>
-						</goals>
-						<configuration>
-							<exchangeUrl>https://anypoint.mulesoft.com/exchange/api/v2</exchangeUrl>
-							<organizationId>${anypoint.orgId}</organizationId>
-							<username>${anypoint.username}</username>
-							<password>${anypoint.password}</password>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+
 		</plugins>
 	</build>
 
