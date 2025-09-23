@@ -6,7 +6,7 @@
 
 	<groupId>c4d83c4a-2070-43b7-a91d-874bad35c913</groupId>
 	<artifactId>demo</artifactId>
-	<version>1.1.9</version>
+	<version>1.2.0</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo</name>
@@ -31,28 +31,32 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
-					<cloudhub2Deployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<provider>MC</provider>
-						<environment>Sandbox</environment>
-						<target>Cloudhub-US-East-2</target>
-						<server>Repository</server>
+					<logLevel>DEBUG</logLevel>
+					<deploymentTimeout>900000</deploymentTimeout>
+					<connectedAppClientId>${client.id}</connectedAppClientId>
+					<connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
+					<connectedAppGrantType>client_credentials</connectedAppGrantType>
+					<organization>${project.groupId}</organization>
+					<environment>Sandbox</environment>
+					<cloudHub2Deployment>
 						<applicationName>${project.artifactId}</applicationName>
-						<releaseChannel>NONE</releaseChannel>
-						<muleVersion>4.4.0</muleVersion>
+						<runtimeVersion>4.4.0</runtimeVersion>
+						<region>us-east-1</region>
 						<replicas>1</replicas>
-						<vCores>0.1</vCores>
+						<workers>
+							<type>MICRO</type>
+							<amount>1</amount>
+						</workers>
+						<objectStoreV2>true</objectStoreV2>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
 						</deploymentSettings>
-
-
-					</cloudhub2Deployment>
-
+					</cloudHub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	
 	<repositories>
 		<repository>
 			<id>anypoint-exchange-v3</id>
@@ -73,6 +77,7 @@
 			<layout>default</layout>
 		</repository>
 	</repositories>
+	
 	<pluginRepositories>
 		<pluginRepository>
 			<id>mulesoft-releases</id>
@@ -84,6 +89,7 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
@@ -92,6 +98,7 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
+	
 	<distributionManagement>
 		<repository>
 			<id>Repository</id>
