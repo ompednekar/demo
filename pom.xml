@@ -6,7 +6,7 @@
 
 	<groupId>c4d83c4a-2070-43b7-a91d-874bad35c913</groupId>
 	<artifactId>demo-app</artifactId>
-	<version>1.3.3</version>
+	<version>1.3.4</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo</name>
@@ -14,7 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.1.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
