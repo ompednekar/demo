@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <settings>
 
   <pluginGroups>
@@ -7,9 +7,9 @@
 
   <servers>
     <server>
-      <id>c4d83c4a-2070-43b7-a91d-874bad35c913</id>
-      <username>omkarcapg</username>
-      <password>OMomkar16@</password>
+      <id>Repository</id>
+      <username>~~~Client~~~</username>
+      <password>${client.id}~?~${client.secret}</password>
     </server>
   </servers>
 
