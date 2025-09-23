@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.9.0</app.runtime>
-		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.1.1</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -83,7 +83,7 @@
 		<repository>
 			<id>Repository</id>
 			<name>Private Exchange repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/c4d83c4a-2070-43b7-a91d-874bad35c913/maven</url>
 			<layout>default</layout>
 		</repository>
 	</repositories>
@@ -103,7 +103,7 @@
 		<repository>
 			<id>Repository</id>
 			<name>Corporate Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/c4d83c4a-2070-43b7-a91d-874bad35c913/maven</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
