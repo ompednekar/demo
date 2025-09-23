@@ -6,7 +6,7 @@
 
 	<groupId>c4d83c4a-2070-43b7-a91d-874bad35c913</groupId>
 	<artifactId>demo</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo</name>
@@ -36,9 +36,11 @@
 						<provider>MC</provider>
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
+						<region>us-east-1</region>
 						<server>Repository</server>
 						<applicationName>${project.artifactId}</applicationName>
 						<releaseChannel>NONE</releaseChannel>
+						<muleVersion>4.6.0</muleVersion>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<deploymentSettings>
