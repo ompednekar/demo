@@ -14,7 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<mule.maven.plugin.version>4.1.1</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.1.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -43,8 +43,10 @@
 						<vCores>0.1</vCores>
 						<deploymentSettings>
 							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+						<skipDeploymentVerification>true</skipDeploymentVerification>
 						</deploymentSettings>
-						<skipExchangeDeployment>true</skipExchangeDeployment>
+						
+						
 					</cloudhub2Deployment>
 
 				</configuration>
