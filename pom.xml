@@ -6,7 +6,7 @@
 
 	<groupId>c4d83c4a-2070-43b7-a91d-874bad35c913</groupId>
 	<artifactId>demo</artifactId>
-	<version>1.1.4</version>
+	<version>1.1.5</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo</name>
@@ -39,7 +39,7 @@
 						<server>Repository</server>
 						<applicationName>${project.artifactId}</applicationName>
 						<releaseChannel>NONE</releaseChannel>
-						<muleVersion>4.6.0</muleVersion>
+						<muleVersion>4.4.0</muleVersion>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<deploymentSettings>
