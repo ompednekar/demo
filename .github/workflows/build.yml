@@ -2,7 +2,7 @@ name: Publish to Exchange & Deploy to CH2.0
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
     
 jobs:         
   build:
@@ -26,12 +26,11 @@ jobs:
       
       - name: Publish to Exchange
         run: |
-          mvn -X -e deploy --settings .maven/settings.xml -DskipMunitTests \
+          mvn deploy --settings .maven/settings.xml -DskipMunitTests \
           -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
           -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
-          
       - name: Deploy to CloudHub 2.0
         run: |
-          mvn -X -e deploy --settings .maven/settings.xml -DskipMunitTests -DmuleDeploy \
+          mvn deploy --settings .maven/settings.xml -DskipMunitTests -DmuleDeploy \
           -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
           -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
