@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <settings>
-    <servers>
-        <server>
-            <id>anypoint-exchange-v3</id>
-            <username>~~~Client~~~</username>
-            <password>df569d6f25d743f4bd5aa25556fcc786~?~B51F6427c89d41B7b9492A6a04a297b1</password>
-        </server>
-    </servers>
+  <servers>
+    <server>
+      <id>anypoint-exchange-v3</id>
+      <username>${env.ANYPOINT_USERNAME}</username>
+      <password>${env.ANYPOINT_PASSWORD}</password>
+    </server>
+  </servers>
 </settings>
