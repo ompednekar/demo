@@ -105,12 +105,12 @@
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${anypoint.orgId}/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/c4d83c4a-2070-43b7-a91d-874bad35c913/maven</url>
 		</repository>
 		<snapshotRepository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange Snapshot Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${anypoint.orgId}/maven</url>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/c4d83c4a-2070-43b7-a91d-874bad35c913/maven</url>
 		</snapshotRepository>
 	</distributionManagement>
 
