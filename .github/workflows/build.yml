@@ -2,7 +2,7 @@ name: Deploy to CloudHub 2.0
 
 on:
   push:
-    branches: [ main ]
+    branches: [ develop ]
 
 jobs:
   deploy:
@@ -19,8 +19,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Publish to Exchange
-        run: mvn deploy --settings .maven/settings.xml -DskipMunitTests -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
-
-      - name: Deploy to CloudHub 2.0 with Debug
-        run: mvn -X -e clean package mule:deploy --settings .maven/settings.xml -DskipMunitTests -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
+      - name: Deploy to Exchange and CloudHub 2.0
+        run: |
+          mvn clean deploy --settings .maven/settings.xml -DskipMunitTests -DmuleDeploy \
+            -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
+            -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
