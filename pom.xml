@@ -6,7 +6,7 @@
 
 	<groupId>097dcf69-9dd9-4dfc-a44c-309aab373a7d</groupId>
 	<artifactId>demohdhdhhd-app</artifactId>
-	<version>1.1.3</version>
+	<version>1.1.4</version>
 	<packaging>mule-application</packaging>
 
 	<name>demo</name>
@@ -14,7 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>4.5.0</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -38,7 +38,7 @@
 						<target>Cloudhub-US-East-2</target>
 						<server>Repository</server>
 						<applicationName>${project.artifactId}</applicationName>
-						<muleVersion>4.6.14</muleVersion>
+						<javaVersion>17</javaVersion>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 
