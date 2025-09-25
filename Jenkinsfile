@@ -5,7 +5,6 @@ pipeline {
     timestamps()
     disableConcurrentBuilds()
     buildDiscarder(logRotator(numToKeepStr: '20'))
-    ansiColor('xterm')
   }
 
   parameters {
@@ -79,7 +78,6 @@ pipeline {
           set -e
           APP_JAR=$(ls -1 target/*.jar | head -n 1)
 
-          # Create environment-specific properties
           cat > app-props.json <<'EOF'
           {
             "mule.env": "${ENV}",
@@ -89,7 +87,6 @@ pipeline {
           }
           EOF
 
-          # Deploy to CloudHub 2.0
           anypoint-cli-v4 runtime-mgr cloudhub-2 applications deploy "$APP_NAME" "$APP_JAR" \
             --runtimeVersion "$RUNTIME_VERSION" \
             --region "$REGION" \
@@ -108,7 +105,6 @@ pipeline {
     stage('Post-Deploy Verification') {
       steps {
         sh '''
-          # Verify deployment status
           STATUS=$(anypoint-cli-v4 runtime-mgr cloudhub-2 applications describe "$APP_NAME" --json | jq -r '.status')
           test "$STATUS" = "RUNNING"
           echo "✅ Application deployed successfully and is RUNNING"
